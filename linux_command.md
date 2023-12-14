@@ -4,8 +4,10 @@
    - Command definition in single line:
      - Example: mkdir command is use for create directory  
    - Command:
-     - Syntax:'mkdir directory_name'  
-     >mkdir demo
+     - Syntax:'mkdir directory_name'
+       ```    
+          mkdir demo
+       ```
    - Describe the command:
      - Example:
      - mkdir: It is used to create a directory
@@ -13,7 +15,7 @@
 ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/bceefd61-f906-4ce2-a7e9-b92e74a8db80)
    
 ## Q2. How to Remove a directory.
-    To remove a directory in Linux, you can use the rmdir or rm command. However, these commands have some differences in their functionality:
+   To remove a directory in Linux, you can use the rmdir or rm command. However, these commands have some differences in their functionality:
 
 - Using rmdir:
 
@@ -21,7 +23,9 @@
      - Example: The rmdir command is specifically used to remove directories.  
    - Command:
      - Syntax: rmdir 'directory_name'
-     > Example: rmdir demo
+       ```
+       rmdir demo
+       ```
    - Describe the cammand:
      - Example: 
        - rmdir: The rmdir command is specifically used to remove empty directories.
@@ -33,19 +37,28 @@
 The rm command, when used with the `-r` or `-rf` option, can be used to delete directories recursively, along with their contents.
 
 - Syntax to remove an directory:
-  > rm -d directory_name 
+  rm -d directory_name
+ 
+ ```
+  rm -d demo  
+ ``` 
 
   ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/adcf5678-b420-45fd-96e3-eedbedeff926)
 
 - Syntax to remove a directory and its contents recursively (use with caution, as it deletes files and subdirectories inside the specified directory):
   > rm -r directory_name
+  ```
+    rm -r demo
+  ```
 
  ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/f5bf6563-a40c-4c5d-a399-93627c5f3cfb)
 
 
 - Syntax to forcefully remove a directory and its contents without prompting for confirmation:
   > rm -rf directory_name   
-
+ ```
+   rm -rf demo
+```
  ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/e41e6898-648a-4feb-bb33-fa265bd61b29)
 
 
@@ -57,8 +70,9 @@ To make a copy of a file in Linux, you can use the cp command. The basic syntax 
 
 - Syntax:  
   - cp source_file_name destination_file_name
-  > cp data.txt data1.txt
-
+  ```
+     cp data.txt data1.txt
+  ```
   ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/8c99c7f7-d969-4c99-bec5-6a8bbde6422a)
 
 Replace `source_file` with the file you want to copy and `destination_file` with the name or path where you want to create the copy.
@@ -76,8 +90,9 @@ To rename a file, use mv followed by the current filename and the desired new fi
 
 Syntax:
 - mv current_file_name new_file_name
-> mv data.txt newdata.txt 
-
+```
+ mv data.txt newdata.txt 
+```
   ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/31306c15-2d3f-48a7-81ff-20de19953cab)
 
 ## Q5. Create an empty file.
@@ -86,9 +101,9 @@ The `touch` command is often used to create empty files or update timestamps of 
 
 Syntax: 
 - touch filename.ext
-
->touch empty_file.txt
-
+```
+touch empty_file.txt
+```
 ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/9161e4e9-c680-4a61-ab52-e6cb44beaf7b)
 
 For example:  To create an empty file named empty_file.txt.
@@ -102,8 +117,9 @@ You can specify the names of the files you want to remove:
 Syntax:
 
 - rm file1.txt file2.txt file3.txt
-> rm data1.txt empty_file.txt newdata.txt
-
+```
+ rm data1.txt empty_file.txt newdata.txt
+```
  ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/c2484c71-efa0-45e1-bde7-184d2abac7c1)
 
 - Removing Files Interactively:  
@@ -111,9 +127,9 @@ You can use the -i flag with rm to prompt for confirmation before deleting each 
 
 Syntax:
 - rm -i file1_name file2_name file3_name
-
->rm -i file.txt file2.txt emptly.txt
-
+```
+rm -i file.txt file2.txt emptly.txt
+```
 ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/4cc5714e-9eb4-4ff6-ac2f-e8ce4975ef88)
 
 This command will prompt for confirmation before deleting each file individually.
@@ -125,8 +141,9 @@ Remove Files with a Common Pattern:
 For instance, to remove all files with the `.txt` extension in the current directory:
 
 - rm *.txt
->rm *.txt
-
+```
+rm *.txt
+```
 ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/4b029059-a232-4acb-909d-2e8f80b21bdc)
 
 
@@ -136,8 +153,9 @@ To remove all files and subdirectories within a folder without deleting the fold
 
 Syntax:
 - rm -r /path/to/directory/*
->rm -r demo/*
-
+```
+rm -r demo/*
+```
 ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/cf7d2a40-2220-4021-8de4-a275110e9d77)
 
 ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/7984c8ac-9f52-4327-b57c-1cba463b9a74)
@@ -150,8 +168,9 @@ example command using brace expansion and the mkdir command to create folders fr
 
 Syntax:
 - mkdir {a..z}
->mkdir {a..z}
-
+```
+mkdir {a..z}
+```
 ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/7093c8bf-d482-4812-8d98-155fd1df9ebd)
 
 
