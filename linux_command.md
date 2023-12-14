@@ -1,6 +1,5 @@
 # linux_40_Command
 
-
 ## Q1.How to make a directory.  
    - Command definition in single line:
      - Example: mkdir command is use for create directory  
@@ -10,9 +9,9 @@
    - Describe the command:
      - Example:
      - mkdir: It is used to create a directory
-     
-![Alt text](<Screenshot from 2023-12-14 10-19-34-1.png>)
 
+![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/bceefd61-f906-4ce2-a7e9-b92e74a8db80)
+   
 ## Q2. How to Remove a directory.
     To remove a directory in Linux, you can use the rmdir or rm command. However, these commands have some differences in their functionality:
 
@@ -27,7 +26,7 @@
      - Example: 
        - rmdir: The rmdir command is specifically used to remove empty directories.
 
-  ![Alt text](<Screenshot from 2023-12-14 10-20-20-1.png>)
+  ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/6c9bae1c-4af3-4f8f-88a5-636ae168f4d7)
 
 - Using rm:  
 
@@ -36,33 +35,31 @@ The rm command, when used with the `-r` or `-rf` option, can be used to delete d
 - Syntax to remove an directory:
   > rm -d directory_name 
 
-  ![Alt text](<Screenshot from 2023-12-14 11-01-44.png>)
+  ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/adcf5678-b420-45fd-96e3-eedbedeff926)
 
 - Syntax to remove a directory and its contents recursively (use with caution, as it deletes files and subdirectories inside the specified directory):
   > rm -r directory_name
 
-  ![Alt text](<Screenshot from 2023-12-14 11-02-54.png>)
+ ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/f5bf6563-a40c-4c5d-a399-93627c5f3cfb)
 
 
 - Syntax to forcefully remove a directory and its contents without prompting for confirmation:
   > rm -rf directory_name   
 
-  ![Alt text](<Screenshot from 2023-12-14 11-03-58.png>)
+ ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/e41e6898-648a-4feb-bb33-fa265bd61b29)
+
 
 Note of Caution: Be extremely cautious while using ` rm`,`-rf`as it will forcefully delete the specified directory and its contents without asking for confirmation
-
 
 ## Q3. Make a copy of a file.  
 
 To make a copy of a file in Linux, you can use the cp command. The basic syntax for copying a file is:
 
-
 - Syntax:  
   - cp source_file_name destination_file_name
   > cp data.txt data1.txt
 
-  ![Alt text](<Screenshot from 2023-12-14 11-45-42.png>)  
-
+  ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/8c99c7f7-d969-4c99-bec5-6a8bbde6422a)
 
 Replace `source_file` with the file you want to copy and `destination_file` with the name or path where you want to create the copy.
 
@@ -81,8 +78,7 @@ Syntax:
 - mv current_file_name new_file_name
 > mv data.txt newdata.txt 
 
-  ![Alt text](<Screenshot from 2023-12-14 12-00-03.png>)
-
+  ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/31306c15-2d3f-48a7-81ff-20de19953cab)
 
 ## Q5. Create an empty file.
 
@@ -93,10 +89,9 @@ Syntax:
 
 >touch empty_file.txt
 
-![Alt text](<Screenshot from 2023-12-14 12-09-38.png>)
+![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/9161e4e9-c680-4a61-ab52-e6cb44beaf7b)
 
 For example:  To create an empty file named empty_file.txt.
-
 
 ## Q5. Remove multiple files with a single command.
 
@@ -109,8 +104,7 @@ Syntax:
 - rm file1.txt file2.txt file3.txt
 > rm data1.txt empty_file.txt newdata.txt
 
- ![Alt text](<Screenshot from 2023-12-14 12-34-05.png>)
-
+ ![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/c2484c71-efa0-45e1-bde7-184d2abac7c1)
 
 - Removing Files Interactively:  
 You can use the -i flag with rm to prompt for confirmation before deleting each file:
@@ -120,10 +114,9 @@ Syntax:
 
 >rm -i file.txt file2.txt emptly.txt
 
-![Alt text](<Screenshot from 2023-12-14 12-38-09.png>)
+![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/4cc5714e-9eb4-4ff6-ac2f-e8ce4975ef88)
 
 This command will prompt for confirmation before deleting each file individually.
-
 
 - Using Wildcards (*):  
 You can also use wildcards to match multiple files based on a pattern:
@@ -134,7 +127,7 @@ For instance, to remove all files with the `.txt` extension in the current direc
 - rm *.txt
 >rm *.txt
 
-![Alt text](<Screenshot from 2023-12-14 12-42-29.png>)
+![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/4b029059-a232-4acb-909d-2e8f80b21bdc)
 
 
 ## Q6. Remove content from the folder without removing folder.
@@ -145,12 +138,11 @@ Syntax:
 - rm -r /path/to/directory/*
 >rm -r demo/*
 
-![Alt text](<Screenshot from 2023-12-14 13-07-04.png>)
+![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/cf7d2a40-2220-4021-8de4-a275110e9d77)
 
-![Alt text](<Screenshot from 2023-12-14 13-07-19.png>)
+![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/7984c8ac-9f52-4327-b57c-1cba463b9a74)
 
 Replace `/path/to/directory` with the actual path to the directory whose contents you want to remove.
-
 
 ## Q7. Create multiple folder(a-z) with a single command.
 
@@ -160,6 +152,7 @@ Syntax:
 - mkdir {a..z}
 >mkdir {a..z}
 
-![Alt text](<Screenshot from 2023-12-14 12-52-36.png>)
+![image](https://github.com/Devendra-Singh6464/linux_command/assets/136952464/7093c8bf-d482-4812-8d98-155fd1df9ebd)
+
 
 Executing this command will create directories with the names `a`, `b`, `c`, ..., `z` in the current working directory. Each directory will be named after a letter from `a` to `z`.
