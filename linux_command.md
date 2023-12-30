@@ -175,3 +175,55 @@ mkdir {a..z}
 
 
 Executing this command will create directories with the names `a`, `b`, `c`, ..., `z` in the current working directory. Each directory will be named after a letter from `a` to `z`.
+
+
+### VIM file command -
+
+# to save
+esc :w
+
+#to saver and exit
+esc : wq!
+
+#to quit without saving
+esc :q!
+
+#to copy a line, go to the line
+esc: yy
+
+#to paste line
+esc:p
+
+#to copy multiple line,N lines
+esc : Nyy
+
+# undo changes
+esc: u
+
+# move to top of file
+esc : 1G
+
+# move to bottom of the file
+esc : G
+
+# move to specific line
+esc : N G
+
+# to show line number
+esc : set number OR : set nu
+
+# to remove line number
+esc : set number OR : set nonu
+
+# to search for a word
+esc : /<word-to-search>
+
+#search and replace
+esc :%s/<world-to-search>/<world-to-replace>
+#replace globally
+esc:%s/<world-to-search>/<world-to-replace>/g
+
+
+# to watch all vim command
+$ vimtotur
+
