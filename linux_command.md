@@ -177,53 +177,70 @@ mkdir {a..z}
 Executing this command will create directories with the names `a`, `b`, `c`, ..., `z` in the current working directory. Each directory will be named after a letter from `a` to `z`.
 
 
-### VIM file command -
+## VIM file command -
 
-# to save
+### to save
+```
 esc :w
+```
 
-#to saver and exit
+### to saver and exit
+```
 esc : wq!
-
-#to quit without saving
+```
+### to quit without saving
+```
 esc :q!
-
-#to copy a line, go to the line
+```
+### to copy a line, go to the line
+```
 esc: yy
-
-#to paste line
+```
+### to paste line
+```
 esc:p
-
-#to copy multiple line,N lines
+```
+### to copy multiple line,N lines
+```
 esc : Nyy
-
-# undo changes
+```
+### undo changes
+```
 esc: u
-
-# move to top of file
+```
+### move to top of file
+```
 esc : 1G
-
-# move to bottom of the file
+```
+### move to bottom of the file
+```
 esc : G
-
-# move to specific line
+```
+### move to specific line
+```
 esc : N G
-
-# to show line number
+```
+### to show line number
+```
 esc : set number OR : set nu
-
-# to remove line number
+```
+### to remove line number
+```
 esc : set number OR : set nonu
-
-# to search for a word
+```
+### to search for a word
+```
 esc : /<word-to-search>
-
-#search and replace
+```
+### search and replace
+```
 esc :%s/<world-to-search>/<world-to-replace>
-#replace globally
+```
+### replace globally
+```
 esc:%s/<world-to-search>/<world-to-replace>/g
+```
 
-
-# to watch all vim command
+### to watch all vim command
 $ vimtotur
 
