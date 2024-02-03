@@ -60,7 +60,15 @@ deepak@bhandari:/home$
 
 Q6. Rename all files in the "Documents" subdirectory of "MyFiles" with a ".bak" extension. Ensure the original file names are preserved.
 ```
+deepak@bhandari:/home/myFile/Documents$ sudo rename -n 's/\.txt$/.bak/' *.txt
+rename(document.txt, document.bak)
+rename(hardlik.txt, hardlik.bak)
+rename(softlink.txt, softlink.bak)
 
+deepak@bhandari:/home/myFile/Documents$ sudo rename 's/\.txt$/.bak/' *.txt
+deepak@bhandari:/home/myFile/Documents$ ls
+document.bak  hardlik.bak  softlink.bak
+deepak@bhandari:/home/myFile/Documents$ 
 ```
 
 
@@ -92,6 +100,8 @@ Q10.Run the date command and store the output in a variable named "current_date.
 deepak@bhandari:/home$ current_date=$(date)
 deepak@bhandari:/home$ echo "Current date: $current_date"
 Current date: Saturday 03 February 2024 06:05:49 PM IST
+sudo su
+echo "$current_date" >> my_notes.txt
 ```
 
 Q11. Edit the Bash startup script (e.g., .bashrc) to set an environment variable named "CUSTOM_PATH" to a specific directory path. Ensure the variable is available in new shell sessions.
