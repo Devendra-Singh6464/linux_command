@@ -139,48 +139,79 @@ deepak@bhandari:~$ sudo useradd -m -d /home/john_doe -g users john_doe
 
 Q16. Add the user "john_doe" to the sudoers file, allowing them superuser privileges. Confirm that "john_doe" can execute commands with sudo.
 ```
+sudo visudo
+Inside visudo file write below content and save it and exit
+
+john_doe ALL=(ALL:ALL) ALL
+Write any desire path
+
+sudo ls /Desktop
+sudo su
  
 ```
 
 Q17. Modify the user account "john_doe" to change the default shell to "/bin/bash" and set the account's expiration date to one month from today.
 ```
-
+sudo chsh -s /bin/bash john_doe
+sudo chage -E $(date -d "+1 month" +"%Y-%m-%d") john_doe
 ```
 
 Q18. Create a new group named "development_team." Add "john_doe" to this group and verify the group's existence.
 ```
+sudo groupadd development_team
+sudo usermod -aG development_team john_doe
+getent group development_team
 ```
 
 Q19. Remove "john_doe" from the "users" group and add them to the "development_team" group. Confirm the changes.
 ```
-
+sudo gpasswd -d john_doe users
+sudo usermod -aG development_team john_doe
+groups john_doe
 ```
 
 Q20. Delete the user account "john_doe" and ensure that their home directory is also removed.
 ```
+sudo userdel -r john_doe
+groups jhon_doe
 ```
 
 Q21.	Delete the group "development_team" and ensure that all users previously belonging to the group are appropriately handled.
 ```
-
+getent group development_team
+sudo usermod -g users jhon_doe
+sudo groupdel development_team
+getent group development_team
 ```
 
 Q22.	Implement a password policy that requires users to change their passwords every 90 days. Apply this policy to all existing and new user accounts.
 ```
-
+sudo chage -M 90 -m 0 -W 7 -I 30 -E -1 $(cut -d: -f1 /etc/passwd)
+sudo vim /etc/login.defs
+```
+Inside this file add max pass day as 90 and min pass day as 0
+```
+PASS_MAX_DAYS   90
+PASS_MIN_DAYS   0
 ```
 
 Q23.	Manually lock the user account "john_doe." Attempt to log in as "john_doe" to confirm that the account is locked. Then, unlock the account.
 ```
-
+sudo passwd -l john_doe
+su - john_doe
+sudo passwd -u john_doe
 ```
 
 Q24.	Use the id command to display detailed information about the "john_doe" user, including user ID, group ID, and supplementary groups.
 ```
-
+id john_doe
+id -u john_doe
+id -g john_doe
+id -G john_doe
 ```
 
 Q25.	Configure the password aging for the user "john_doe" to enforce a maximum password age of 60 days. Confirm that the changes take effect.
 ```
-
+sudo chage -M 60 john_doe
+sudo chage -l john_doe
 ```
